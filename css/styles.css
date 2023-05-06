@@ -88,18 +88,6 @@ img {
   align-items: center;
   /* column-gap: 76px; */
 }
-.menu {
-  display: flex;
-  gap: 40px;
-}
-.menu-item {
-  padding: 24px 0;
-}
-.menu-contact {
-  display: flex;
-  gap: 40px;
-}
-
 .logo {
   margin-right: 76px;
   font-family: 'Raleway', sans-serif;
@@ -113,8 +101,19 @@ img {
 .logo-plus {
   color: var(--primary-color-text);
 }
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu-contact {
+  display: flex;
+  gap: 40px;
+}
 
 .menu-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
