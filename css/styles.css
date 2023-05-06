@@ -2,6 +2,7 @@
   --primary-color-text: #2e2f42;
   --accent-color: #4d5ae5;
   --accent-color-secondary: #f4f4fd;
+  --set-gap: 24px;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -19,7 +20,47 @@ button {
   font-family: inherit;
   cursor: pointer;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section-two {
+  padding-bottom: 120px;
+}
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/* -----------Components---------- */
 .section-title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   text-align: center;
@@ -28,8 +69,34 @@ button {
   line-height: 1.11;
   color: var(--primary-color-text);
 }
+/* ------------/Components-------------- */
 
 /* --------Header-------- */
+.page-header {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 76px;
+}
+.menu {
+  display: flex;
+  column-gap: 40px;
+}
+.menu-contact {
+  display: flex;
+  column-gap: 40px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -55,6 +122,7 @@ button {
 }
 .address-link {
   font-style: normal;
+  margin-left: auto;
 }
 .contact-link {
   font-weight: 400;
@@ -73,8 +141,14 @@ button {
 /* ---------Hero-----------*/
 .hero {
   background-color: var(--primary-color-text);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
+  margin-bottom: 48px;
+  width: 496px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -83,6 +157,11 @@ button {
   color: #ffffff;
 }
 .modal-open-hero-button {
+  padding: 14px 30px;
+  min-width: 169px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -95,6 +174,10 @@ button {
   background-color: #404bbf;
 }
 .hero-button {
+  padding: 12px 24px;
+  min-width: 69px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -110,10 +193,51 @@ button {
 /* --------/Hero---------- */
 
 /* --------SEction 1. 2. 3.------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.section-one-list {
+  column-gap: var(--set-gap);
+  display: flex;
+}
+.section-two-list {
+  column-gap: var(--set-gap);
+  display: flex;
+}
+.section-one-list-item {
+  flex-basis: calc((100%-72px) / 4);
+}
+.section-two-list-item {
+  flex-basis: calc((100%-72) / 3);
+  /* outline: 1px solid tomato; */
+}
+.card-list {
+  display: flex;
+  column-gap: var(--set-gap);
+}
 .card {
   background-color: #ffffff;
 }
+.card-flex {
+  flex-basis: calc((100%-72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+.card-flex-content {
+  padding: 32px 16px;
+}
 .title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -127,14 +251,60 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
 }
+.card-description {
+  text-align: center;
+}
 .our-team {
   background-color: #f4f4fd;
 }
+.list-button-portfolio {
+  display: flex;
+  column-gap: var(--set-gap);
+  margin-bottom: 72px;
+  justify-content: center;
+}
+.list-card-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--set-gap));
+  margin-top: -48px;
+}
+.list-card-portfolio-item {
+  flex-basis: calc(100% / 3 - var(--set-gap));
+  margin-left: var(--set-gap);
+  margin-top: 48px;
+}
+.card-portfolio-content {
+  padding: 32px 0 32px 16px;
+}
+.title-card-portfolio {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  color: var(--primary-color-text);
+  text-align: left;
+}
+/* .list-card-portfolio-item * {
+  outline: 1px solid tomato;
+} */
+.card-portfolio {
+  border: 1px solid #e7e9fc;
+}
+
+/* .card-flex * {
+  outline: 1px solid tomato;
+} */
 /* --------/SEction 1. 2. 3.------- */
 
 /* ---------Footer ----------*/
 .footer-style {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
   background-color: var(--primary-color-text);
 }
 .logo-plus-footer {
@@ -142,6 +312,8 @@ button {
 }
 .footer-desc {
   color: var(--accent-color-secondary);
+  width: 264px;
+  margin-top: 16px;
 }
 
 /* ---------/Footer ----------*/
