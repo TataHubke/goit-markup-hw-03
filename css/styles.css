@@ -91,6 +91,8 @@ img {
 .menu {
   display: flex;
   gap: 40px;
+}
+.menu-item {
   padding: 24px 0;
 }
 .menu-contact {
@@ -199,7 +201,7 @@ img {
 }
 /* --------/Hero---------- */
 
-/* --------SEction 1. 2. 3.------- */
+/* --------SEction 1. 2. 3. Portfolio------- */
 /* .visually-hidden {
   position: absolute;
   width: 1px;
@@ -225,6 +227,7 @@ img {
 }
 .section-two-list-item {
   flex-basis: calc((100%-72) / 3);
+
   /* outline: 1px solid tomato; */
 }
 .card-list {
@@ -268,12 +271,15 @@ img {
 .our-team {
   background-color: #f4f4fd;
 }
+/* ------------Portfolio----------- */
+
 .list-button-portfolio {
   display: flex;
   gap: var(--set-gap);
   margin-bottom: 72px;
   justify-content: center;
 }
+
 .list-card-portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -285,23 +291,27 @@ img {
   margin-left: var(--set-gap);
   margin-top: 48px;
 }
+.card-portfolio {
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .card-portfolio-content {
-  padding: 32px 0 32px 16px;
+  padding: 32px 16px;
 }
 .title-card-portfolio {
   text-align: left;
 }
+
 /* .list-card-portfolio-item * {
   outline: 1px solid tomato;
 } */
-.card-portfolio {
-  border: 1px solid #e7e9fc;
-}
 
 /* .card-flex * {
   outline: 1px solid tomato;
 } */
-/* --------/SEction 1. 2. 3.------- */
+
+/* --------/Section 1. 2. 3. Portfolio------- */
 
 /* ---------Footer ----------*/
 .footer-style {
